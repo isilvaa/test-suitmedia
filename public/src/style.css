@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    float: left;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.logo img {
+    filter: brightness(0) invert(1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f96500;
+    transition: top 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+header.hidden {
+    top: -100%;
+}
+
+header.transparent {
+    background-color: rgba(249, 100, 0, 0.233);
+}
+
+header ul {
+    list-style: none;
+    float: left;
+    margin-left: 200px;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 15px;
+}
+
+header ul li.active,
+header ul li:hover {
+    border-bottom: 3px solid #ffff;
+}
+
+header ul li a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.banner {
+    position: relative;
+    height: 500px;
+    background: url('../assets/bunga.webp') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.banner-content h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.banner-content p {
+    font-size: 1.5em;
+}
+
+/* Parallax effect */
+.banner {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.posts {
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controls-right {
+    display: flex;
+    align-items: center;
+}
+
+.controls-right label {
+    margin-right: 10px;
+}
+
+.controls-right select {
+    margin-right: 20px;
+}
+
+.posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 calc(33% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .title {
+    padding: 10px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.card .description {
+    padding: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.pagination a.active {
+    font-weight: bold;
+}

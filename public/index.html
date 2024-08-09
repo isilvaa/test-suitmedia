@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suitmedia</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="assets/suitmedia-logo.webp" alt="Suitmedia Logo">
+        </div>
+        <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="active"><a href="#ideas">Ideas</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Ideas</h1>
+            <p>Where all our great things begin</p>
+        </div>
+    </section>
+
+    <section class="posts">
+        <div class="controls">
+            <span id="pagination-info">Showing 1 - 10 of 100</span>
+            <div class="controls-right">
+                <label for="show-per-page">Show per page:</label>
+                <select id="show-per-page">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="posts-list" id="posts-list">
+            <!-- Cards via API -->
+        </div>
+
+        <div class="pagination" id="pagination">
+            <!-- Pagination controls -->
+        </div>
+    </section>
+    <script src="src/script.js"></script> 
+</body>
+</html>
